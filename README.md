@@ -28,8 +28,7 @@ rm -rf imageslist.txt ; ls img > imageslist.txt
                                         -addColumnTableVariable=Q2 \
                                         -addSelectableVariable=cro  \
                                         -defaultPlot=img/cro-phi_W-1.23_Q2-3.50.png \
-                                        -imagesSize="1200 1200"
-mv page.html phi_theta.html
+                                        -imagesSize="500 600"
 ```
 
 
@@ -60,3 +59,4 @@ becomes:
 			    dist += ".png"
 			    document.DIST.src = dist
 
+The popPic dimensions could be adjusted as well 
