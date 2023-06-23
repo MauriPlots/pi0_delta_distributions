@@ -1,0 +1,62 @@
+
+# Conform to htmlImageBrowserCreator
+
+
+## Rename files
+
+
+To batch rename files in a directory, open find, select all, and right click to rename.
+
+Examples:
+
+`plain_cro_theta_W1.25_Q26.00` must become `cro-theta_W-1.25_Q-26.00`:
+
+- `plain_cro_theta` > `cro-theta` 
+- `W1.25` > `W-1.25`
+- `Q26.00` > `Q6-.00`
+
+
+- To convert to png use the script `convert.zsh`
+
+
+### Cross sections
+
+```
+rm -rf imageslist.txt ; ls img > imageslist.txt
+../../../htmlBrowserCreator/pageCreator \
+                                        -addRowTableVariable=W  \
+                                        -addColumnTableVariable=Q2 \
+                                        -addSelectableVariable=cro  \
+                                        -defaultPlot=img/cro-phi_W-1.23_Q2-3.50.png \
+                                        -imagesSize="1200 1200"
+mv page.html phi_theta.html
+```
+
+
+If the distribution type name is at the beginning of the file, the html file can be modified.
+
+For example:
+
+			    var dist = "img/"
+			    dist += "W-"
+			    dist += row;
+			    dist += "_"
+			    dist += "Q2-"
+			    dist += col;
+			    dist += "_cro-";
+			    dist += cro;
+			    dist += ".png"
+
+becomes:
+
+			    var dist = "img/"
+			    dist += "cro-";
+			    dist += cro;
+			    dist += "_W-"
+			    dist += row;
+			    dist += "_"
+			    dist += "Q2-"
+			    dist += col;
+			    dist += ".png"
+			    document.DIST.src = dist
+
