@@ -11,15 +11,20 @@ Examples:
 
 `plain_cro_theta_W1.25_Q26.00` must become `cro-theta_W-1.25_Q-26.00`:
 
-- `plain_cro_theta` > `cro-theta` 
-- `W1.25` > `W-1.25`
-- `Q26.00` > `Q6-.00`
+- `cro_` > `cro-` 
+- `_W` > `_W-`
+- `_Q2` > `_Q6-`
 
 
-- To convert to png use the script `convert.zsh`
+- To convert to png use the script `convert.zsh`:
+
+```
+cd img
+../../convert.zsh
+```
 
 
-### Cross sections
+### Experimental Cross sections
 
 ```
 rm -rf imageslist.txt ; ls img > imageslist.txt
@@ -32,7 +37,28 @@ rm -rf imageslist.txt ; ls img > imageslist.txt
 ```
 
 
+
+
+### Theoretical Cross sections
+
+```
+rm -rf imageslist.txt ; ls img > imageslist.txt
+../../../htmlBrowserCreator/pageCreator \
+                                        -addRowTableVariable=W  \
+                                        -addColumnTableVariable=Q2 \
+                                        -addSelectableVariable=cro  \
+                                        -defaultPlot=img/cro-phi_W-1.23_Q2-3.50.png \
+                                        -imagesSize="500 600"
+```
+
+
+
+---
+
+
 If the distribution type name is at the beginning of the file, the html file can be modified.
+
+
 
 For example:
 
