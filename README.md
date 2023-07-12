@@ -63,8 +63,17 @@ rm -rf imageslist.txt ; ls img > imageslist.txt
                                         -imagesSize="500 600"
 ```
 
-### Legendre Coefficient
+### Legendre Coefficients
 
+```
+rm -rf imageslist.txt ; ls img > imageslist.txt
+../../../htmlBrowserCreator/pageCreator \
+                                        -addRowTableVariable=coeff  \
+                                        -addColumnTableVariable=q2 \
+                                        -addSelectableVariable=L  \
+                                        -defaultPlot=img/coeff-A_q2-3.50_L-2.png \
+                                        -imagesSize="500 600"
+```
 
 ### Multipoles
 
