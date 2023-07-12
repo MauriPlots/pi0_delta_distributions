@@ -1,0 +1,119 @@
+<html>
+	 <head>
+		 <style type="text/css">
+			 #indextable { 
+				 font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; 
+				 border-collapse: collapse; 
+			 } 
+			 #indextable td { 
+				 border: 1px solid #ddd; 
+				 padding: 6px; 
+			 } 
+			 #indextable tr:nth-child(even){background-color: #f2f2f2;} 
+			 #indextable tr:hover {background-color: #ddd;}
+			 #indextable td:hover {background-color: #119; color: white;}
+			 .button { 
+			 background-color: white; 
+			 color: black; 
+			 border: 2px solid #555555; 
+			 border-radius: 10%; 
+			 padding: 16px 32px; 
+			 text-align: center; 
+			 text-decoration: none; 
+			 display: inline-block; 
+			 font-size: 16px; 
+			 margin: 4px 2px; 
+			 -webkit-transition-duration: 0.2s; 
+			 transition-duration: 0.4s; 
+			 cursor: pointer; 
+			 } 
+			 .button:hover { 
+			 background-color: #555555; 
+			 color: white; 
+			 } 
+		 </style>
+		 <script>
+			 function popPic() {picDisplayed = window.open(document.DIST.src, document.DIST.src,'statusbar=no, scrollbars=auto, status=no, resizable=no, width=550, height=650');}
+			 var L = "1";
+			 function showPic(row, col)
+			 {
+			    var dist = "img/"
+			    dist += "dist-"
+			    dist += row;
+			    dist += "_"
+			    dist += "Q2-"
+			    dist += col;
+			    dist += "_L-";
+			    dist += L;
+			    dist += ".png"
+			    document.DIST.src = dist
+			 }
+			 function changeL()
+			 {
+				 var LTitle = "L " ;
+				 LTitle += L;
+				 document.getElementById("LButtons").innerHTML = LTitle;
+			 }
+		 </script>
+	 </head>
+	 <body>
+		 <center>
+			 <table cellpadding=10> 
+				 <tr> 
+					 <td colspan=2> 
+						 <table> <tr>
+							 <td id="LButtons" align=center colspan=2>L 1</td></tr><tr>
+							 <td><button class="button" onclick="javascript:L='1' ; changeL(); ">1</button></td>
+							 <td><button class="button" onclick="javascript:L='2' ; changeL(); ">2</button></td>
+						 </tr></table>
+					 </td> 
+				 </tr> 
+				 <tr> 
+					 <td> 
+						 <table id="indextable" class="indextable"> 
+							 <tr> 
+								 <td> <sub> dist</sub> <sup> Q2</sup> </td>
+								 <td>2.40</td>
+								 <td>3.00</td>
+								 <td>3.50</td>
+								 <td>4.20</td>
+								 <td>5.00</td>
+								 <td>6.00</td>
+							 </tr> 
+							 <tr> 
+								 <td>lpt</td>
+								 <td onclick="popPic()" onmouseover="showPic('lpt', '2.40')" />
+								 <td onclick="popPic()" onmouseover="showPic('lpt', '3.00')" />
+								 <td onclick="popPic()" onmouseover="showPic('lpt', '3.50')" />
+								 <td onclick="popPic()" onmouseover="showPic('lpt', '4.20')" />
+								 <td onclick="popPic()" onmouseover="showPic('lpt', '5.00')" />
+								 <td onclick="popPic()" onmouseover="showPic('lpt', '6.00')" />
+							 </tr> 
+							 <tr> 
+								 <td>slt</td>
+								 <td onclick="popPic()" onmouseover="showPic('slt', '2.40')" />
+								 <td onclick="popPic()" onmouseover="showPic('slt', '3.00')" />
+								 <td onclick="popPic()" onmouseover="showPic('slt', '3.50')" />
+								 <td onclick="popPic()" onmouseover="showPic('slt', '4.20')" />
+								 <td onclick="popPic()" onmouseover="showPic('slt', '5.00')" />
+								 <td onclick="popPic()" onmouseover="showPic('slt', '6.00')" />
+							 </tr> 
+							 <tr> 
+								 <td>stt</td>
+								 <td onclick="popPic()" onmouseover="showPic('stt', '2.40')" />
+								 <td onclick="popPic()" onmouseover="showPic('stt', '3.00')" />
+								 <td onclick="popPic()" onmouseover="showPic('stt', '3.50')" />
+								 <td onclick="popPic()" onmouseover="showPic('stt', '4.20')" />
+								 <td onclick="popPic()" onmouseover="showPic('stt', '5.00')" />
+								 <td onclick="popPic()" onmouseover="showPic('stt', '6.00')" />
+							 </tr> 
+						 </table> 
+					 </td> 
+					 <td> 
+						 <img name = "DIST" width="650px" src="img/dist-lpt_Q2-3.00_L-2.png"/> 
+					 </td> 
+				 </tr> 
+			 </table> 
+		 </center>
+	 </body>
+</html>

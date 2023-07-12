@@ -52,9 +52,26 @@ rm -rf imageslist.txt ; ls img > imageslist.txt
 ```
 
 
+### Structure Functions
+```
+rm -rf imageslist.txt ; ls img > imageslist.txt
+../../../htmlBrowserCreator/pageCreator \
+                                        -addRowTableVariable=dist  \
+                                        -addColumnTableVariable=Q2 \
+                                        -addSelectableVariable=L  \
+                                        -defaultPlot=img/dist-lpt_Q2-3.00_L-2.png \
+                                        -imagesSize="500 600"
+```
+
+### Legendre Coefficient
+
+
+### Multipoles
+
+
+
 
 ---
-
 
 If the distribution type name is at the beginning of the file, the html file can be modified.
 
