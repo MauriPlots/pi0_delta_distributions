@@ -1,0 +1,100 @@
+<html>
+	 <head>
+		 <style type="text/css">
+			 #indextable { 
+				 font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; 
+				 border-collapse: collapse; 
+			 } 
+			 #indextable td { 
+				 border: 1px solid #ddd; 
+				 padding: 6px; 
+			 } 
+			 #indextable tr:nth-child(even){background-color: #f2f2f2;} 
+			 #indextable tr:hover {background-color: #ddd;}
+			 #indextable td:hover {background-color: #119; color: white;}
+			 .button { 
+			 background-color: white; 
+			 color: black; 
+			 border: 2px solid #555555; 
+			 border-radius: 10%; 
+			 padding: 16px 32px; 
+			 text-align: center; 
+			 text-decoration: none; 
+			 display: inline-block; 
+			 font-size: 16px; 
+			 margin: 4px 2px; 
+			 -webkit-transition-duration: 0.2s; 
+			 transition-duration: 0.4s; 
+			 cursor: pointer; 
+			 } 
+			 .button:hover { 
+			 background-color: #555555; 
+			 color: white; 
+			 } 
+		 </style>
+		 <script>
+			 function popPic() {picDisplayed = window.open(document.DIST.src, document.DIST.src,'statusbar=no, scrollbars=auto, status=no, resizable=no, width=550, height=650');}
+			 function showPic(row, col)
+			 {
+			    var dist = "img_q2/"
+			    dist += "q2-"
+			    dist += row;
+			    dist += "_"
+			    dist += "L-"
+			    dist += col;
+			    dist += ".png"
+			    document.DIST.src = dist
+			 }
+		 </script>
+	 </head>
+	 <body>
+		 <center>
+			 <table cellpadding=10> 
+				 <tr> 
+					 <td> 
+						 <table id="indextable" class="indextable"> 
+							 <tr> 
+								 <td> <sub> q2</sub> <sup> L</sup> </td>
+								 <td>1</td>
+								 <td>2</td>
+							 </tr> 
+							 <tr> 
+								 <td>2.40</td>
+								 <td onclick="popPic()" onmouseover="showPic('2.40', '1')" />
+								 <td onclick="popPic()" onmouseover="showPic('2.40', '2')" />
+							 </tr> 
+							 <tr> 
+								 <td>3.00</td>
+								 <td onclick="popPic()" onmouseover="showPic('3.00', '1')" />
+								 <td onclick="popPic()" onmouseover="showPic('3.00', '2')" />
+							 </tr> 
+							 <tr> 
+								 <td>3.50</td>
+								 <td onclick="popPic()" onmouseover="showPic('3.50', '1')" />
+								 <td onclick="popPic()" onmouseover="showPic('3.50', '2')" />
+							 </tr> 
+							 <tr> 
+								 <td>4.20</td>
+								 <td onclick="popPic()" onmouseover="showPic('4.20', '1')" />
+								 <td onclick="popPic()" onmouseover="showPic('4.20', '2')" />
+							 </tr> 
+							 <tr> 
+								 <td>5.00</td>
+								 <td onclick="popPic()" onmouseover="showPic('5.00', '1')" />
+								 <td onclick="popPic()" onmouseover="showPic('5.00', '2')" />
+							 </tr> 
+							 <tr> 
+								 <td>6.00</td>
+								 <td onclick="popPic()" onmouseover="showPic('6.00', '1')" />
+								 <td onclick="popPic()" onmouseover="showPic('6.00', '2')" />
+							 </tr> 
+						 </table> 
+					 </td> 
+					 <td> 
+						 <img name = "DIST" width="650px" src="img/q2-2.40_L-2.png"/> 
+					 </td> 
+				 </tr> 
+			 </table> 
+		 </center>
+	 </body>
+</html>

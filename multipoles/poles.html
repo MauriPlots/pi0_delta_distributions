@@ -1,0 +1,100 @@
+<html>
+	 <head>
+		 <style type="text/css">
+			 #indextable { 
+				 font-family: "Trebuchet MS", Arial, Helvetica, sans-serif; 
+				 border-collapse: collapse; 
+			 } 
+			 #indextable td { 
+				 border: 1px solid #ddd; 
+				 padding: 6px; 
+			 } 
+			 #indextable tr:nth-child(even){background-color: #f2f2f2;} 
+			 #indextable tr:hover {background-color: #ddd;}
+			 #indextable td:hover {background-color: #119; color: white;}
+			 .button { 
+			 background-color: white; 
+			 color: black; 
+			 border: 2px solid #555555; 
+			 border-radius: 10%; 
+			 padding: 16px 32px; 
+			 text-align: center; 
+			 text-decoration: none; 
+			 display: inline-block; 
+			 font-size: 16px; 
+			 margin: 4px 2px; 
+			 -webkit-transition-duration: 0.2s; 
+			 transition-duration: 0.4s; 
+			 cursor: pointer; 
+			 } 
+			 .button:hover { 
+			 background-color: #555555; 
+			 color: white; 
+			 } 
+		 </style>
+		 <script>
+			 function popPic() {picDisplayed = window.open(document.DIST.src, document.DIST.src,'statusbar=no, scrollbars=auto, status=no, resizable=no, width=550, height=650');}
+			 function showPic(row, col)
+			 {
+			    var dist = "img_poles/"
+			    dist += "pole-"
+			    dist += row;
+			    dist += "_"
+			    dist += "L-"
+			    dist += col;
+			    dist += ".png"
+			    document.DIST.src = dist
+			 }
+		 </script>
+	 </head>
+	 <body>
+		 <center>
+			 <table cellpadding=10> 
+				 <tr> 
+					 <td> 
+						 <table id="indextable" class="indextable"> 
+							 <tr> 
+								 <td> <sub> pole</sub> <sup> L</sup> </td>
+								 <td>1</td>
+								 <td>2</td>
+							 </tr> 
+							 <tr> 
+								 <td>e0m1</td>
+								 <td onclick="popPic()" onmouseover="showPic('e0m1', '1')" />
+								 <td onclick="popPic()" onmouseover="showPic('e0m1', '2')" />
+							 </tr> 
+							 <tr> 
+								 <td>e1m1</td>
+								 <td onclick="popPic()" onmouseover="showPic('e1m1', '1')" />
+								 <td onclick="popPic()" onmouseover="showPic('e1m1', '2')" />
+							 </tr> 
+							 <tr> 
+								 <td>m1m1</td>
+								 <td onclick="popPic()" onmouseover="showPic('m1m1', '1')" />
+								 <td onclick="popPic()" onmouseover="showPic('m1m1', '2')" />
+							 </tr> 
+							 <tr> 
+								 <td>m1p2</td>
+								 <td onclick="popPic()" onmouseover="showPic('m1p2', '1')" />
+								 <td onclick="popPic()" onmouseover="showPic('m1p2', '2')" />
+							 </tr> 
+							 <tr> 
+								 <td>s0m1</td>
+								 <td onclick="popPic()" onmouseover="showPic('s0m1', '1')" />
+								 <td onclick="popPic()" onmouseover="showPic('s0m1', '2')" />
+							 </tr> 
+							 <tr> 
+								 <td>s1m1</td>
+								 <td onclick="popPic()" onmouseover="showPic('s1m1', '1')" />
+								 <td onclick="popPic()" onmouseover="showPic('s1m1', '2')" />
+							 </tr> 
+						 </table> 
+					 </td> 
+					 <td> 
+						 <img name = "DIST" width="650px" src="img/pole-m1p2_L-1.png"/> 
+					 </td> 
+				 </tr> 
+			 </table> 
+		 </center>
+	 </body>
+</html>

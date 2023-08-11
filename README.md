@@ -77,6 +77,33 @@ rm -rf imageslist.txt ; ls img > imageslist.txt
 
 ### Multipoles
 
+Two directories for two different distributions
+
+
+```
+rm img ; ln -s img_poles img
+rm -rf imageslist.txt ; ls img > imageslist.txt
+../../../htmlBrowserCreator/pageCreator \
+                                        -addRowTableVariable=pole  \
+                                        -addColumnTableVariable=L  \
+                                        -defaultPlot=img/pole-m1p2_L-1.png \
+                                        -imagesSize="500 600"
+mv page.html poles.html                                      
+```
+
+```
+rm img ; ln -s img_q2 img
+rm -rf imageslist.txt ; ls img > imageslist.txt
+../../../htmlBrowserCreator/pageCreator \
+                                        -addRowTableVariable=q2  \
+                                        -addColumnTableVariable=L  \
+                                        -defaultPlot=img/q2-2.40_L-2.png \
+                                        -imagesSize="500 600"
+mv page.html q2.html                                      
+```
+
+Edit both poles.html and q2.html to point to the img_< name> instead of img
+
 
 
 
