@@ -102,7 +102,8 @@ rm -rf imageslist.txt ; ls img > imageslist.txt
 mv page.html q2.html                                      
 ```
 
-Edit both poles.html and q2.html to point to the img_< name> instead of img
+Edit both poles.html and q2.html to point to the img_< name> 
+instead of img (script and default image)
 
 
 
